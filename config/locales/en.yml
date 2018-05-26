@@ -30,4 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  screens:
+    signup:
+      already_registered: 'Already have account?'
+    login:
+      no_account: "Don't have account?"
+  buttons_and_links:
+      signup: 'Sign Up Here'
+      sign_in: 'sign in'
+      register: 'register'
+  labels:
+    first_name: 'First Name'
+    last_name: 'Last Name'
+    email: 'Email'
+    password: 'Password'
+
