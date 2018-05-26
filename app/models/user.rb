@@ -7,6 +7,9 @@ class User < ApplicationRecord
   include ActiveRecord::SecureToken::ClassMethods       
   before_create :generate_authentication_token, :set_active
 
+  validates_presence_of :first_name, :email, :encrypted_password, on: :create
+  validates_uniqueness_of :email, on: :create
+
   class << self
 
   	def created? user_params
@@ -18,6 +21,11 @@ class User < ApplicationRecord
   		end
   		false
   	end
+
+  	def by_email email_id
+  		return email_id.present? ? find_by(email: email_id.strip) : nil
+  	end
+
   end
 
   protected

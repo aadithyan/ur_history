@@ -1,20 +1,21 @@
 <div class="login-form">
     <%= render partial: 'basic/messages' %>
-    <form action="" method="post">
+    <%= form_for(resource_name, as: resource, url: user_session_path) do |f| %>    
         <div class="form-group">
             <label><%= I18n.t('labels.email') %></label>
-            <input class="au-input au-input--full" type="email" name="email" placeholder="<%= I18n.t('labels.email') %>">
+            <%= f.text_field :email, autofocus: true, class: "au-input au-input--full", placeholder: I18n.t('labels.email') %>
         </div>
         <div class="form-group">
             <label><%= I18n.t('labels.password') %></label>
-            <input class="au-input au-input--full" type="password" name="password" placeholder="<%= I18n.t('labels.password') %>">
+            <%= f.password_field :password, class: "au-input au-input--full", placeholder: I18n.t('labels.password') %>
         </div>
         <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit"><%= I18n.t('buttons_and_links.sign_in') %></button>
-    </form>
+    <% end %>
     <div class="register-link">
         <p>
             <%= I18n.t('screens.login.no_account') %>
             <a href="<%= registrations_path %>"><%= I18n.t('buttons_and_links.signup') %></a>
         </p>
     </div>
+    
 </div>

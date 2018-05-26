@@ -46,5 +46,8 @@ en:
     password: 'Password'
   messages:
     signup_success: 'Hooray!!! You are a historian.'  
-    signup_failed: 'Oops!!! You are still not a historian.'  
+    signup_failed: 'Oops!!! You are still not a historian.'
+    fill_the_data: 'Fill the fields below.'
+    user_not_exists: 'Email is not registered'
+    inorrect_password: 'Wrong Password'
 
