@@ -16,7 +16,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+./database.yml
+./db/schema.rb
 # Ignore uploaded files in development
 /storage/*
 
