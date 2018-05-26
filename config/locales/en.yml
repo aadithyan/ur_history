@@ -44,4 +44,7 @@ en:
     last_name: 'Last Name'
     email: 'Email'
     password: 'Password'
+  messages:
+    signup_success: 'Hooray!!! You are a historian.'  
+    signup_failed: 'Oops!!! You are still not a historian.'  
 

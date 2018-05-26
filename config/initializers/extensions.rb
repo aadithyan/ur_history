@@ -1,0 +1,1 @@
+Dir["#{Rails.root}/apps/error_handling/*.rb"].each { |file| require file }
